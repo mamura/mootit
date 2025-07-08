@@ -18,6 +18,13 @@ class ProductSearch extends Component
 
     #[Url(as: 'brands', history: true)]
     public array $selectedBrands = [];
+
+    public function clearFilters()
+    {
+        $this->search = '';
+        $this->selectedCategories = [];
+        $this->selectedBrands = [];
+    }
     
     public function render()
     {
